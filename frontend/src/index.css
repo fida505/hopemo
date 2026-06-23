@@ -148,16 +148,6 @@ body {
 .bottom-card-container {
   width: 100%;
   padding: 0 0 40px;
-  opacity: 0;
-  animation: slideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 3.8s;
-}
-
-.trusted-card {
-  background: white;
-  border-radius: 24px;
-  padding: 24px 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* Buttons */
@@ -182,6 +172,9 @@ body {
   cursor: pointer;
   transition: background 0.2s ease;
   font-family: 'Inter', sans-serif;
+  opacity: 0;
+  animation: slideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 3.8s;
 }
 .btn-primary:hover { background-color: #216048; }
 
@@ -196,6 +189,9 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: 'Inter', sans-serif;
+  opacity: 0;
+  animation: slideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 4.1s;
 }
 .btn-secondary:hover {
   background-color: var(--secondary-green);

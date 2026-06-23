@@ -34,18 +34,16 @@ function App() {
         {/* Spacer to push card to bottom */}
         <div className="spacer"></div>
 
-        {/* Bottom Buttons Card */}
+        {/* Bottom Buttons Container */}
         <div className="bottom-card-container">
-          <div className="trusted-card">
-            <div className="buttons-container">
-              <button className="btn-primary">
-                Get started
-                <ArrowRight size={20} />
-              </button>
-              <button className="btn-secondary">
-                I already have an account
-              </button>
-            </div>
+          <div className="buttons-container">
+            <button className="btn-primary">
+              Get started
+              <ArrowRight size={20} />
+            </button>
+            <button className="btn-secondary">
+              I already have an account
+            </button>
           </div>
         </div>
 
