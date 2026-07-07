@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.checkin-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #FCFAF8;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Nature scene — top right corner */
+.checkin-scene {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 55%;
+  height: 260px;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 0 0 0 80px;
+}
+.checkin-scene-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Scrollable content */
+.checkin-scroll {
+  position: relative;
+  z-index: 10;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Badge */
+.checkin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #E8F5EE;
+  color: #2B7A5C;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+/* Title */
+.checkin-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1A2E35;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  max-width: 240px;
+}
+.checkin-title-green {
+  color: #2B7A5C;
+}
+
+.checkin-subtitle {
+  font-size: 14px;
+  color: #546E7A;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Mood Grid — 4 columns on wide, 2 columns always on mobile */
+.mood-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+/* Mood Card */
+.mood-card {
+  position: relative;
+  background: white;
+  border: 1.5px solid #E8E8E8;
+  border-radius: 18px;
+  padding: 16px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.mood-card:hover {
+  border-color: #2B7A5C;
+  background: var(--card-color, #f8f8f8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(43, 122, 92, 0.12);
+}
+.mood-card--selected {
+  border-color: var(--card-border, #2B7A5C);
+  background: var(--card-color, #E8F5EE);
+  box-shadow: 0 6px 20px rgba(43, 122, 92, 0.15);
+}
+
+/* Checkbox */
+.mood-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #CCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: white;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.mood-check--active {
+  background: #2B7A5C;
+  border-color: #2B7A5C;
+}
+
+/* Emoji Image */
+.mood-emoji {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mood-emoji img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mood-emoji-text {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.mood-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1A2E35;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.mood-desc {
+  font-size: 11px;
+  color: #78909C;
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+/* Buttons */
+.checkin-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.checkin-btn-primary {
+  width: 100%;
+  background-color: #2B7A5C;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+.checkin-btn-primary:hover { background-color: #216048; }
+
+.checkin-btn-secondary {
+  width: 100%;
+  background-color: white;
+  color: #2B7A5C;
+  border: 1.5px solid #E0E0E0;
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+.checkin-btn-secondary:hover {
+  background-color: #E8F5EE;
+  border-color: #2B7A5C;
+}
+
+/* Bottom scene */
+.checkin-bottom-scene {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  height: 120px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.checkin-bottom-scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+}
